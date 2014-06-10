@@ -1,0 +1,45 @@
+{
+	"name": "chef-gearman",
+	"version": "0.1",
+	"description": "Builds gearman",
+	"long_description": "",
+	"maintainer": "Richard Sumilang",
+	"maintainer_email": "me@richardsumilang.com",
+	"license": "Apache 2.0",
+	"platforms": {
+		"fedora": ">= 0.0.0",
+		"redhat": ">= 0.0.0",
+		"centos": ">= 0.0.0",
+		"ubuntu": ">= 0.0.0",
+		"debian": ">= 0.0.0",
+		"amazon": ">= 0.0.0",
+		"suse": ">= 0.0.0",
+		"scientific": ">= 0.0.0",
+		"oracle": ">= 0.0.0",
+		"smartos": ">= 0.0.0",
+		"mac_os_x": ">= 10.6.0",
+		"mac_os_x_server": ">= 10.6.0"
+	},
+	"dependencies": {
+		"apt": ">= 2.4.1", /* http://community.opscode.com/cookbooks/apt */
+		"build-essential": ">= 1.4.4" /* http://community.opscode.com/cookbooks/build-essential */
+	},
+	"recommendations": {
+	},
+	"suggestions": {
+		"pkgutil": ">= 0.0.0"
+	},
+	"conflicting": {
+	},
+	"providing": {
+	},
+	"replacing": {
+	},
+	"attributes": {
+	},
+	"groupings": {
+	},
+	"recipes": {
+		"chef-gearman": "Builds gearman onto server."
+	}
+}
