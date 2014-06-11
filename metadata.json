@@ -21,8 +21,8 @@
 		"mac_os_x_server": ">= 10.6.0"
 	},
 	"dependencies": {
-		"apt": ">= 2.4.1", /* http://community.opscode.com/cookbooks/apt */
-		"build-essential": ">= 1.4.4" /* http://community.opscode.com/cookbooks/build-essential */
+		"apt": ">= 0.0.0",
+		"build-essential": ">= 0.0.0"
 	},
 	"recommendations": {
 	},
@@ -40,6 +40,6 @@
 	"groupings": {
 	},
 	"recipes": {
-		"chef-gearman": "Builds gearman onto server."
+		"chef-gearman": "Builds Gearman Job Server."
 	}
 }
