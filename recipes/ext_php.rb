@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: gearman
-# Attributes:: default
+# Recipe:: ext_php
 # URL:: http://github.com/rsumilang/chef-gearman
 #
 # Copyright 2014, Richard Sumilang <me@richardsumilang.com>
@@ -18,5 +18,11 @@
 # limitations under the License.
 #
 
-default['gearman']['version'] = '1.1.5'
-default['gearman']['required_packages'] = %w{ libboost-all-dev libevent-dev libcurl4-openssl-dev libcloog-ppl0 }
+# Cookbooks
+include_recipe "php"
+
+
+# Install Gearman
+php_pear "gearman" do
+  action :install
+end

@@ -1,5 +1,5 @@
 {
-	"name": "chef-gearman",
+	"name": "gearman",
 	"version": "0.1",
 	"description": "Builds gearman",
 	"long_description": "",
@@ -22,7 +22,8 @@
 	},
 	"dependencies": {
 		"apt": ">= 0.0.0",
-		"build-essential": ">= 0.0.0"
+		"build-essential": ">= 0.0.0",
+		"php": ">= 0.0.0"
 	},
 	"recommendations": {
 	},
@@ -40,6 +41,6 @@
 	"groupings": {
 	},
 	"recipes": {
-		"chef-gearman": "Builds Gearman Job Server."
+		"chef-gearman": "Builds Gearman Job Server and has support for the PHP extension."
 	}
 }

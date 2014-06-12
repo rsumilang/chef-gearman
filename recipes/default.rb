@@ -1,6 +1,7 @@
 #
-# Cookbook Name:: chef-gearman
+# Cookbook Name:: gearman
 # Recipe:: default
+# URL:: http://github.com/rsumilang/chef-gearman
 #
 # Copyright 2014, Richard Sumilang
 #
@@ -17,37 +18,7 @@
 # limitations under the License.
 #
 
-# Cookbooks
-include_recipe "apt"
-include_recipe "build-essential"
 
-
-# Required Packages
-require_packages = ["libboost-all-dev", "libevent-dev", "libcurl4-openssl-dev", "libcloog-ppl0"]
-require_packages.each { |p|
-  package p do
-    action :install
-  end
-}
-
-
-# Download remote file
-remote_file "#{Chef::Config[:file_cache_path]}/gearmand-#{node['gearman']['version']}.tar.gz" do
-  source "https://launchpad.net/gearmand/1.2/#{node['gearman']['version']}/+download/gearmand-#{node['gearman']['version']}.tar.gz"
-  action :create_if_missing
-end
-
-
-# Compile downloaded file
-bash "compile_gearman_source" do
-  cwd Chef::Config[:file_cache_path]
-  code <<-EOH
-    tar zxf gearmand-#{node['gearman']['version']}.tar.gz
-    cd gearmand-#{node['gearman']['version']}
-    ./configure
-    make && make install
-    ldconfig
-  EOH
-  creates "/usr/local/bin/gearman"
-  creates "/usr/local/bin/gearadmin"
-end
+#
+# ¯\_(ツ)_/¯ ... idk what you want.
+#
