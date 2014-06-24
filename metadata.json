@@ -41,6 +41,8 @@
 	"groupings": {
 	},
 	"recipes": {
-		"chef-gearman": "Builds Gearman Job Server and has support for the PHP extension."
+		"gearman::default": "Default recipe",
+		"gearman::ext_php": "Installs PHP extension",
+		"gearman::server": "Downloads and builds gearman server onto machine"
 	}
 }
