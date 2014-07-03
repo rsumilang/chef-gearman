@@ -19,8 +19,6 @@ supports 'smartos', '>= 0.0.0'
 supports 'mac_os_x', '>= 10.6.0'
 supports 'mac_os_x_server', '>= 10.6.0'
 
-sugests 'pkgutil'
-
 depends 'apache2'
 depends 'apt'
 depends 'database'
