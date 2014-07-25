@@ -18,19 +18,15 @@
 # limitations under the License.
 #
 
-
-
-# Install required daemon package
-package 'daemon' do
-  action :install
-end
-
-
-
 define :gearman_daemon, :user => 'root', :retries => 5, :port => 4730, :enabled => true do
 
   daemon_name = params[:name]
   cookbook = params[:cookbook] ? params[:cookbook] : 'gearman'
+
+  # Install required daemon package
+  package 'daemon' do
+    action :install
+  end
 
   # Install lsb daemon script
   template "/etc/init.d/#{daemon_name}" do
