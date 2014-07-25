@@ -19,6 +19,5 @@
 #
 
 
-#
-# ¯\_(ツ)_/¯ ... idk what you want.
-#
+# Default
+include_recipe 'gearman::install_source'

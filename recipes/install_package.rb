@@ -1,9 +1,9 @@
 #
 # Cookbook Name:: gearman
-# Recipe:: ext_php
+# Recipe:: install_package
 # URL:: http://github.com/rsumilang/chef-gearman
 #
-# Copyright 2014, Richard Sumilang <me@richardsumilang.com>
+# Copyright 2014, Richard Sumilang
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,11 +18,8 @@
 # limitations under the License.
 #
 
-# Cookbooks
-include_recipe 'php'
 
-
-# Install Gearman
-php_pear 'gearman' do
+# Install by package
+package 'gearman' do
   action :install
 end

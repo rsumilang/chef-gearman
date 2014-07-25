@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: gearman
-# Recipe:: server
+# Recipe:: install_source
 # URL:: http://github.com/rsumilang/chef-gearman
 #
 # Copyright 2014, Richard Sumilang <me@richardsumilang.com>
@@ -19,8 +19,8 @@
 #
 
 # Cookbooks
-include_recipe "apt"
-include_recipe "build-essential"
+include_recipe 'apt'
+include_recipe 'build-essential'
 
 
 # Required Packages
@@ -39,7 +39,7 @@ end
 
 
 # Compile downloaded file
-bash "compile_gearman_source" do
+bash 'compile_gearman_source' do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
     tar zxf gearmand-#{node['gearman']['version']}.tar.gz
@@ -48,6 +48,6 @@ bash "compile_gearman_source" do
     make && make install
     ldconfig
   EOH
-  creates "/usr/local/bin/gearman"
-  creates "/usr/local/bin/gearadmin"
+  creates '/usr/local/bin/gearman'
+  creates '/usr/local/bin/gearadmin'
 end
